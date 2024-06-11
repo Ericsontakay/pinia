@@ -1,4 +1,10 @@
 <template>
+<<<<<<< HEAD
+=======
+  <pre>
+    {{serviceOrderStore}}
+  </pre>
+>>>>>>> upstream/main
   <v-app>
     <v-layout>
       <v-app-bar class="text-center">
@@ -17,6 +23,7 @@
             </v-col>
 
             <v-col>
+<<<<<<< HEAD
               <div class="d-flex justify-end mb-2">
                 <v-label class="mr-2" style="width: 120px">N⁰ da OS</v-label>
                 <v-text-field variant="outlined" density="compact" type="number" prepend-inner-icon="mdi-pound"
@@ -40,10 +47,14 @@
                 <v-select :items="['Aberto', 'Em processo', 'Fechado']" placeholder="Escolha" variant="outlined"
                   density="compact" prepend-inner-icon="mdi-power" hide-details style="max-width: 180px;" />
               </div>
+=======
+              <OSDetails />
+>>>>>>> upstream/main
             </v-col>
           </v-row>
 
           <div class="mt-8">
+<<<<<<< HEAD
             <h2 class="mb-2">Dados do cliente</h2>
             <v-row>
               <v-col>
@@ -153,11 +164,19 @@
               <v-btn color="primary" variant="tonal">Adicionar item
               </v-btn>
             </div>
+=======
+            <OSClient />
+          </div>
+
+          <div class="mt-8">
+            <OSServices />
+>>>>>>> upstream/main
           </div>
 
           <div class="mt-6">
             <v-row>
               <v-col>
+<<<<<<< HEAD
                 <v-textarea label="Descrição da ordem de serviço" hide-details variant="outlined" />
               </v-col>
 
@@ -187,6 +206,17 @@
                     </tbody>
                   </v-table>
                 </v-card>
+=======
+                <v-textarea
+                    label="Descrição da ordem de serviço"
+                    hide-details
+                    variant="outlined"
+                />
+              </v-col>
+
+              <v-col>
+                <OSTotal />
+>>>>>>> upstream/main
               </v-col>
             </v-row>
           </div>
@@ -202,8 +232,19 @@
 </template>
 
 <script setup>
+<<<<<<< HEAD
 import { ref } from 'vue';
 
 const menu2 = ref(false)
 const date = ref(null)
+=======
+import {useServiceOrderStore} from './store/serviceOrder.js';
+import {ref} from 'vue';
+import OSDetails from './components/OSDetails.vue';
+import OSClient from './components/OSClient.vue';
+import OSServices from './components/OSServices.vue';
+import OSTotal from './components/OSTotal.vue';
+
+const serviceOrderStore = useServiceOrderStore()
+>>>>>>> upstream/main
 </script>
