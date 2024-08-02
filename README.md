@@ -5,3 +5,15 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 ## Recommended IDE Setup
 
 - [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
+
+-----------------------------------------------------
+
+# Sobre o Pinia:
+
+## Exemplos de solicitações ajax sem o pinia:
+
+![img.png](img.png)
+
+## Exemplos de solicitações ajax com pinia:
+
+![img_1.png](img_1.png)

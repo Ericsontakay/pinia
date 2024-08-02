@@ -10,6 +10,11 @@
 
       <v-main class="mt-6">
         <v-container>
+
+          <Avatar/>
+          <Details/>
+          <Preferences/>
+
           <v-row>
             <v-col>
               <h3>Organizações Tabajara</h3>
@@ -52,9 +57,9 @@
       </v-main>
     </v-layout>
   </v-app>
-  <pre>
-    {{serviceOrderStore}}
-  </pre>
+<!--  <pre>-->
+<!--    {{serviceOrderStore}}-->
+<!--  </pre>-->
 </template>
 
 <script setup>
@@ -66,6 +71,9 @@ import OSClient from './components/OSClient.vue';
 import OSServices from './components/OSServices.vue';
 import OSTotal from './components/OSTotal.vue';
 import {storeToRefs} from "pinia";
+import Avatar from "./components/Extra01/Avatar.vue";
+import Details from "./components/Extra01/Details.vue";
+import Preferences from "./components/Extra01/Preferences.vue";
 
 const date = ref(null)
 const menu2 = ref(false)
