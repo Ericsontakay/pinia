@@ -38,6 +38,8 @@ export const useServiceOrderStore = defineStore('serviceOrder', {
     },
   },
 
+  // Computed da store
+  // Reduce uma função como primeiro parametro e o segundo parametro como valor inicial (0), dentro da funcao ele recebe o total acumulado e o objeto do loop (o), e retorna total mais e/ou igual ao preço do objeto do loop vezes a quantidade de objeto do loop;
   getters: {
     subtotal(state) {
       return state
@@ -46,5 +48,18 @@ export const useServiceOrderStore = defineStore('serviceOrder', {
           return total += o.price * o.qty
         }, 0)
     },
+    // Na função de calculo do total, se não existir nenhum valor de desconto, ele vai retornar o valor do subtotal, ou seja o valor original;
+    // Para calcular o desconto de um produto é preciso dividir a porcentagem de desconto por 100 e multiplicar o resultado pelo preço original.
+    total(state) {
+    if (state.discountType === 'R$') {
+      return state.subtotal - state.discountValue
+    }
+
+    if (state.discountType === '%'){
+      return state.subtotal - (state.subtotal * state.discountValue / 100)
+    }
+
+    return state.subtotal
+    }
   },
 })

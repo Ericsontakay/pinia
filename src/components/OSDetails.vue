@@ -1,6 +1,7 @@
 <template>
   <div class="d-flex justify-end mb-2">
     <v-label class="mr-2" style="width: 120px">N⁰ da OS</v-label>
+    <!--    Aqui vamos popular inserido os dados da store e usando no v-model -->
     <v-text-field
         v-model="orderDetails.number"
         variant="outlined"
@@ -59,7 +60,10 @@
 import {useServiceOrderStore} from '../store/serviceOrder.js';
 import {storeToRefs} from 'pinia';
 import {ref} from 'vue';
+
 const serviceOrderStore = useServiceOrderStore();
+
+// No código abaixo usando o storeToRefs, o v-model fica assim:         v-model="orderDetails.number"; ao inves de ficar assim:         v-model="serviceOrderStore.orderDetails.number"
 const {orderDetails} = storeToRefs(serviceOrderStore)
 
 const duedateMenu = ref(false)

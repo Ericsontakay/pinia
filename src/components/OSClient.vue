@@ -39,6 +39,7 @@
 <script setup>
 import {useServiceOrderStore} from '../store/serviceOrder.js';
 import {storeToRefs} from 'pinia';
+
 const serviceOrderStore = useServiceOrderStore()
 const {client} = storeToRefs(serviceOrderStore)
 </script>

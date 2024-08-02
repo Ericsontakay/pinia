@@ -68,7 +68,8 @@
         color="primary"
         variant="tonal"
         @click="serviceOrderStore.addService"
-    >Adicionar item
+    >
+      Adicionar item
     </v-btn>
   </div>
 </template>
@@ -77,6 +78,10 @@
 import {useServiceOrderStore} from '../store/serviceOrder.js';
 import {storeToRefs} from 'pinia';
 
+// No codigo abaixo a gente instancia a store e faz a desestruturação e para deixar ela reativa a gente usar o storeToRefs do pinia e ele vai criar a conexão:
+// const serviceOrderStore = useServiceOrderStore()
+// const {services} = storeToRefs(serviceOrderStore)
 const serviceOrderStore = useServiceOrderStore()
 const {services} = storeToRefs(serviceOrderStore)
+
 </script>
