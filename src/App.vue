@@ -12,7 +12,9 @@
         <v-container>
 
           <Avatar/>
+          <hr>
           <Details/>
+          <hr>
           <Preferences/>
 
           <v-row>
@@ -71,6 +73,7 @@ import OSClient from './components/OSClient.vue';
 import OSServices from './components/OSServices.vue';
 import OSTotal from './components/OSTotal.vue';
 import {storeToRefs} from "pinia";
+
 import Avatar from "./components/Extra01/Avatar.vue";
 import Details from "./components/Extra01/Details.vue";
 import Preferences from "./components/Extra01/Preferences.vue";
@@ -79,4 +82,6 @@ const date = ref(null)
 const menu2 = ref(false)
 const serviceOrderStore = useServiceOrderStore()
 const { description } = storeToRefs(serviceOrderStore)
+
+const name = ref('Jon Snow')
 </script>

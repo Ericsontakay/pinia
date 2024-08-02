@@ -32,3 +32,14 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 ![img_4.png](img_4.png)
 
+- ## Compartilhar dados entre componentes não parentes;
+
+![img_5.png](img_5.png)
+
+- ## A gente vai usar o Pinia e todos os componentes vão utilizar os dados do Pinia;
+
+![img_6.png](img_6.png)
+
+
+
+

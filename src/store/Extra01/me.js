@@ -3,7 +3,9 @@ import axios from "axios";
 
 export const useMeStore = defineStore('me', {
     state: () => ({
-        me: []
+        me: {
+            name: 'Jon Snow'
+        }
     }),
     actions: {
         async getMe(){
